@@ -15,6 +15,10 @@ let punktx = 0
 let sprite: game.LedSprite = null
 let x = randint(0, 4)
 let y = randint(0, 4)
+if (x == 2 || y == 2) {
+    x = randint(0, 4)
+    y = randint(0, 4)
+}
 basic.showString("A=links")
 basic.showString("B=rechts")
 basic.showString("A+B=runter")
@@ -38,12 +42,6 @@ basic.forever(function () {
     }
     if (y == 1) {
         punkty = 1
-    }
-    if (x == 2) {
-        x = randint(0, 4)
-    }
-    if (y == 2) {
-        x = randint(0, 4)
     }
     if (x == 3) {
         punktx = 3
